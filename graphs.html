@@ -66,14 +66,18 @@
 		  </div>
 		</div>
         <center>
-			<div class="navbar" style="width: 440px;">
+			<div class="navbar" style="width: 770px;">
 			  <div class="navbar-inner">
 				<a class="brand" href="javascript:void(0)">Scale</a>
 				<ul class="nav" id="scale_menu">
 				  <li id="scaleHour"class="active"><a href="javascript:ChangeCurrentPeriod('Hour', 'scaleHour');">Hour</a></li>
 				  <li id="scaleDay"><a href="javascript:ChangeCurrentPeriod('Day', 'scaleDay');">Day</a></li>
+				  <li id="scale3Days"><a href="javascript:ChangeCurrentPeriod('3Days', 'scale3Days');">3 Days</a></li>
 				  <li id="scaleWeek"><a href="javascript:ChangeCurrentPeriod('Week', 'scaleWeek');">Week</a></li>
+				  <li id="scale2Weeks"><a href="javascript:ChangeCurrentPeriod('2Weeks', 'scale2Weeks');">2 Weeks</a></li>
 				  <li id="scaleMonth"><a href="javascript:ChangeCurrentPeriod('Month', 'scaleMonth');">Month</a></li>
+				  <li id="scale3Months"><a href="javascript:ChangeCurrentPeriod('3Months', 'scale3Months');">3 Months</a></li>
+				  <li id="scale6Months"><a href="javascript:ChangeCurrentPeriod('6Months', 'scale6Months');">6 Months</a></li>
 				  <li id="scaleYear"><a href="javascript:ChangeCurrentPeriod('Year', 'scaleYear');">Year</a></li>
 				</ul>
 			  </div>
@@ -512,7 +516,7 @@
                     .attr('style', 'color:red;border:1px solid red;padding:5px');
             })
             
-            periods = ["Hour", "Day", "Week", "Month", "Year"];
+            periods = ["Hour", "Day", "3Days", "Week", "2Weeks", "Month", "3Months", "6Months", "Year"];
             d3.select("#period_chooser").selectAll().data(periods).enter().append("a")
                 .text(function(period) { return period })
                 .attr('href', function(period){ return "?" + period })
